@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>IP Prefix Checker</title>
+  <!-- Link to the external CSS file -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main>
+  <div class="logo-container">
+    <a href="https://transworld-home.com/" target="_blank">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/3/36/TWA-Logo.png" alt="Transworld Home">
+    </a>
+</div>
+  <h1>IP Prefix Checker</h1>
+  
+  <!-- Loader container -->
+  <div class="loader-container" id="loader">
+    <div class="loader-bar">
+      <div class="loader-bar-fill"></div>
+    </div>
+  </div>
+
+  <!-- Form for IP prefixes and ASN -->
+  <form id="ipForm">
+    <label for="prefixes">Enter IP Prefixes (comma-separated):</label><br>
+    <input type="text" id="prefixes" name="prefixes" placeholder="e.g., 203.0.113.0/24, 198.51.100.0/24"><br><br>
+
+    <label for="asn">Enter ASN:</label><br>
+    <input type="text" id="asn" name="asn" placeholder="e.g., 12345"><br><br>
+
+    <!-- New input for uploading router backup files -->
+    <label for="fileInput">Upload Router Backup Files:</label><br>
+    <input type="file" id="fileInput" name="fileInput" multiple><br><br>
+
+    <button type="submit">Check Prefixes</button>
+    <div id="results"></div>
+  </form>
+</div>
+<div id="loader">
+  <div class="loader-bar">
+    <div class="loader-progress"></div>
+  </div>
+  <div class="loader-percentage">0%</div>
+</div>
+  <!-- Link to the JavaScript file -->
+  <script src="app.js"></script>  
+</body>
+</main>
+</html>
